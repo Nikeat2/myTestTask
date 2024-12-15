@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/changeContactsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChangeContactFragment"
+    android:background="@color/material_dynamic_secondary100">
+
+
+    <EditText
+        android:layout_marginTop="45dp"
+        android:textSize="30sp"
+        android:id="@+id/changeNameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_blank_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameTv"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/nameTv"
+        android:textStyle="bold"
+        android:layout_marginTop="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/nameTv"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toStartOf="@id/changeNameEt"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/surnameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/surnameTv"
+        app:layout_constraintTop_toBottomOf="@id/nameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/changeSurnameEt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/surname"
+        app:layout_constraintBottom_toBottomOf="@+id/surnameTv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/surnameTv"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone:"
+        android:id="@+id/phoneTv"
+        app:layout_constraintTop_toBottomOf="@+id/surnameTv"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="80dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/changePhoneEt"
+        app:layout_constraintStart_toEndOf="@+id/phoneTv"
+        app:layout_constraintBottom_toBottomOf="@+id/phoneTv"
+        android:text="Phone"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/saveTheChangesBtn"
+        android:layout_width="350dp"
+        android:text="@string/save_the_changes"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="30sp"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

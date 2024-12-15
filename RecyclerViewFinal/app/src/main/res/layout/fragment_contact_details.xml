@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contactDetailsLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetailsFragment"
+    android:background="@color/material_dynamic_primary20">
+
+    <ImageView
+        android:id="@+id/detailedContactPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <TextView
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/surname"
+        android:gravity="center"
+        android:id="@+id/detailedContactSurname"
+        android:layout_below="@+id/detailedContactPhoto"
+        android:textSize="35sp"
+        android:background="@color/material_dynamic_secondary10"
+        android:textColor="@color/material_dynamic_neutral95" />
+
+    <TextView
+        android:id="@+id/detailedContactName"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/detailedContactSurname"
+        android:text="@string/name"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:background="@color/material_dynamic_secondary10"
+        android:textColor="@color/material_dynamic_neutral95" />
+
+    <TextView
+        android:id="@+id/detailedContactNumber"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/detailedContactName"
+        android:background="@color/material_dynamic_secondary10"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="@string/_89191667788"
+        android:textSize="35sp"
+        android:textColor="@color/material_dynamic_neutral95" />
+
+    <Button
+        android:id="@+id/changeContactBtn"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/change_the_contact"
+        android:textSize="30sp"
+        />
+</RelativeLayout>

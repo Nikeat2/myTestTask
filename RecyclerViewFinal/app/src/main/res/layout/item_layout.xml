@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="30dp"
+    android:layout_marginTop="50dp"
+    android:backgroundTint="?attr/colorOnPrimaryContainer"
+    >
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:padding="@android:dimen/app_icon_size"
+
+    >
+
+    <TextView
+        android:id="@+id/contactSurname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_marginStart="25dp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/contactPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/contactName" />
+
+    <TextView
+        android:id="@+id/contactName"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="@string/surname"
+        app:layout_constraintStart_toEndOf="@+id/contactPhoto"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constrainedWidth="true"/>
+
+    <ImageView
+        android:id="@+id/contactPhoto"
+        android:contentDescription="@string/photo"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/contactNumber"
+        android:layout_marginStart="25dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="@string/_89191667788"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintStart_toEndOf="@+id/contactPhoto"
+        app:layout_constraintTop_toBottomOf="@+id/contactSurname" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
