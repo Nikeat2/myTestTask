@@ -11,9 +11,6 @@ import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 
 
-
-
-
 class ContactDetailsFragment : Fragment() {
 
     private lateinit var changefragment: ChangeContactFragment
@@ -22,7 +19,6 @@ class ContactDetailsFragment : Fragment() {
     private lateinit var detailedContactSurname: TextView
     private lateinit var detailedContactNumber: TextView
     var contactDetailed: Contact? = null
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +49,6 @@ class ContactDetailsFragment : Fragment() {
             )
         }
     }
-
 
 
     private fun btnClick(

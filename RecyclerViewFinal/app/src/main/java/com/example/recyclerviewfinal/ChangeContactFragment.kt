@@ -41,7 +41,6 @@ class ChangeContactFragment : Fragment() {
         return view
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView(view)
@@ -51,9 +50,6 @@ class ChangeContactFragment : Fragment() {
             parentFragmentManager.popBackStack()
         }
     }
-
-
-
 
     private fun initView(view: View) {
         changeNameEt = view.findViewById(R.id.changeNameEt)
