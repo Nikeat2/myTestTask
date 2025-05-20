@@ -1,4 +1,4 @@
-package com.example.trainingtesttask.presentation.fragments
+package com.example.trainingtesttask.presentation.fragments.favoritesFragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
