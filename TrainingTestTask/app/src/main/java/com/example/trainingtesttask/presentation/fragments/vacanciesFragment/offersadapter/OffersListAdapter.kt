@@ -9,14 +9,21 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.trainingtesttask.R
 import com.example.trainingtesttask.data.models.Offer
+import com.example.trainingtesttask.domain.offersRepository.OnOfferClick
 
-class OffersListAdapter :
+class OffersListAdapter (val onOfferClick: OnOfferClick) :
     ListAdapter<Offer, OffersListAdapter.OffersViewHolder>(OffersDiffUtils()) {
 
-    class OffersViewHolder(view: View) : ViewHolder(view) {
+    inner class OffersViewHolder(view: View) : ViewHolder(view) {
         val offerImage: ImageView = view.findViewById(R.id.itemImage)
         val offerTitle: TextView = view.findViewById(R.id.itemTitleTextView)
         val offerText: TextView = view.findViewById(R.id.offerText)
+
+        init {
+            itemView.setOnClickListener {
+                onOfferClick.onClick(currentList[adapterPosition])
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OffersViewHolder {

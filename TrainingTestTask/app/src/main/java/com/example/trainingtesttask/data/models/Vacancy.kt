@@ -1,12 +1,17 @@
 package com.example.trainingtesttask.data.models
 
+import androidx.room.Embedded
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 import com.example.trainingtesttask.data.models.DTOmodels.Address
 import com.example.trainingtesttask.data.models.DTOmodels.Experience
 import com.example.trainingtesttask.data.models.DTOmodels.Salary
 import com.google.gson.annotations.SerializedName
 
-data class Vacancy (
+@Entity(tableName = "FAVORITE_VACANCIES")
+data class Vacancy(
     @SerializedName("id")
+    @PrimaryKey
     val id: String,
 
     @SerializedName("lookingNumber")
@@ -16,12 +21,14 @@ data class Vacancy (
     val title: String,
 
     @SerializedName("address")
+    @Embedded
     val address: Address,
 
     @SerializedName("company")
     val company: String,
 
     @SerializedName("experience")
+    @Embedded
     val experience: Experience,
 
     @SerializedName("publishedDate")
@@ -31,7 +38,8 @@ data class Vacancy (
     val isFavorite: Boolean,
 
     @SerializedName("salary")
-    val salary: Salary,
+    @Embedded(prefix = "salary_")
+    val salary: Salary?,
 
     @SerializedName("schedules")
     val schedules: List<String>,

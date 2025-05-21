@@ -23,7 +23,6 @@ class MockInterceptor @Inject constructor (private val context: Context) : Inter
             Log.e("MockResponseInterceptor", "Request failed: ${e.message}")
         }
 
-        val mockJsonFileName = "mock_vacancies.json"
         val mockJson = context.resources.openRawResource(R.raw.mock_vacancies).bufferedReader().use { it.readText() }
 
         return Response.Builder()
